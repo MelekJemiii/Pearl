@@ -19,7 +19,7 @@ const LoginFrom = () => {
                 setError("Invalid credentials");
                 return ;
             }
-            router.replace('dashboard');
+        router.replace('/Login');
         } catch (error) {
             console.log('error');
         }

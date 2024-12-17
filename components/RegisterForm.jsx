@@ -40,7 +40,7 @@ const RegisterForm = () => {
             {
                 const form= e.target;
                 setError("");
-                router.push("/");
+                router.push("/Login");
                 form.reset();
 
             }else{
