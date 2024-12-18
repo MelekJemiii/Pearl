@@ -17,8 +17,8 @@ const Googlesigninbutton = () => {
       
   return (
     <button onClick={handlegoogle} className='flex items-center gap-4 shadow-xl rounded-lg pl-3' >
-    <Image src="/google_logo.png" height={40} width={40} alt='hi'  />
-    <span className='bg-blue-500 text-white px-4 py-3'>Sign in with Google</span>
+    <Image src="/google_logo.png" height={40} width={40} alt='hi' className='rounded'  />
+
     
 </button>
   )

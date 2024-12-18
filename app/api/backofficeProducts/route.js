@@ -64,3 +64,5 @@ export async function POST(req) {
       return new Response(JSON.stringify({ message: "Failed to create product", error: error.message }), { status: 500 });
     }
   }
+
+  

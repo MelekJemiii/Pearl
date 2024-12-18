@@ -42,7 +42,7 @@ const LoginFrom = () => {
                     Dont have an account
                     <span className='underline' >Register</span>
                 </Link>
-
+                    
             </form>
           <Googlesigninbutton/>
         </div>

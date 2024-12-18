@@ -1,5 +1,9 @@
+
 import { AdminDashChart } from '@/components/AdminDashChart';
-import React from 'react';
+import { Separator } from '@/components/ui/separator';
+import { signOut, useSession } from "next-auth/react";
+
+
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -10,11 +14,20 @@ const chartData = [
   { month: "June", desktop: 214, mobile: 140 },
 ]
 
-const Main = () => {
+const Main = async() => {
+
+
   return (
-    <div>
-      <h1>Main Page</h1>
-        <AdminDashChart chartData={chartData} />
+    <div className='items-center' >
+      <div className="flex items-center justify-center ">
+  <h1 className="text-lg font-bold mb-6">Dashboard</h1>
+</div>
+      <Separator/>
+
+      <div className=' border border-slate-600 ' >
+      <AdminDashChart chartData={chartData} />
+      </div>
+
     </div>
   );
 };

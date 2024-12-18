@@ -9,9 +9,7 @@ const UserInfo = () => {
     return <div>Loading...</div>;
   }
 
-  if (!session) {
-    return <div>You need to be logged in to view this page.</div>;
-  }
+
 
   return (
     <div className="grid place-items-center h-screen">

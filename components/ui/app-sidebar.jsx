@@ -1,6 +1,5 @@
 import { Calendar, Home, Inbox, Search, Settings , User } from "lucide-react";
 import { ChevronUp } from "lucide-react";
-import { signOut, useSession } from 'next-auth/react';
 
 import {
   Sidebar,
@@ -63,7 +62,8 @@ const items = [
   },
 ]
 
-export function AppSidebar({user}) {
+export function  AppSidebar({user,status,signOut}) {
+ 
   return (
     <Sidebar>
       <SidebarContent>
@@ -83,7 +83,7 @@ export function AppSidebar({user}) {
 
                 </SidebarMenuItem>
               ))}
-                  <DropdownMenu>
+                  <DropdownMenu className='' >
                 <DropdownMenuTrigger asChild>
                   <SidebarMenuButton>
                     {user?.name}
@@ -98,7 +98,7 @@ export function AppSidebar({user}) {
                     <span>Account</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <span>Billing</span>
+                    <span>{status}</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <span onClick={() => signOut()}  >Sign out</span>
